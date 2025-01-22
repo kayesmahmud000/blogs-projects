@@ -42,9 +42,9 @@ export default async function Protected() {
 const user= await getUser()
   // Render the protected content for authenticated users
   return (
-    <div className="my-10 space-y-5 justify-center items-center">
-      <h2 className="text-4xl font-bold text-center ">Welcome to your profile!</h2>
-      <p className="text-red-400 text-center font-bold text-3xl">{user?.email}</p>
+    <div className="my-10 space-y-5 justify-center items-center px-4">
+      <h2 className=" text-2xl lg:text-5xl font-bold text-center ">Welcome to your profile!</h2>
+      <p className="text-red-400 text-center font-bold lg:text-3xl">{user?.email}</p>
     </div>
   );
 }
