@@ -10,7 +10,7 @@ const  Home= async()=> {
       <h2 className=" text-center text-4xl font-bold my-7  border-b-2 py-3"> All Blogs Title Hare </h2>
       <ul>
         {
-          data.map((blogs)=><li key={blogs.id} className="text-xl text-left font-semibold hover:underline hover:text-red-400"> <Link href={`/blog/${blogs.id}`}> {blogs?.title}</Link></li>)
+          data.map((blogs)=><li key={blogs.id} className="text-xl list-disc text-left font-semibold hover:underline hover:text-red-400"> <Link href={`/blog/${blogs.id}`}> {blogs?.title}</Link></li>)
         }
       </ul>
     </div>
