@@ -36,7 +36,7 @@ export default async function Protected() {
 
     // Check if the user is authenticated
     const authenticated = await isAuthenticated();
-    console.log("Is Authenticated:", authenticated); // Debug log
+    // console.log("Is Authenticated:", authenticated); // Debug log
   
     if (!authenticated) {
       // Redirect to the login page if not authenticated
@@ -44,11 +44,10 @@ export default async function Protected() {
     }
   
     const user = await getUser();
-    console.log("User Details:", user); // Debug log
+    // console.log("User Details:", user); // Debug log
   
     // Render the protected content for authenticated users
-    return (
-      <div className="my-10 space-y-5 justify-center items-center px-4">
+    return  ( authenticated && <div className="my-10 space-y-5 justify-center items-center px-4">
         <h2 className="text-2xl lg:text-5xl font-bold text-center">Welcome to your profile!</h2>
         <p className="text-red-400 text-center font-bold lg:text-3xl">{user?.email}</p>
       </div>
